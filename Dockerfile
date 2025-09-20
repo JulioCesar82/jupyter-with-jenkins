@@ -24,6 +24,7 @@ RUN sh -c 'wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | 
     && rm -rf /var/lib/apt/lists/*
 
 COPY . /tmp/resource
+COPY conf/tinyproxy.conf /opt/jupyter-with-jenkins/conf/tinyproxy.conf
 
 # ChromeDriver
 RUN cd /usr/local/sbin/ && \
