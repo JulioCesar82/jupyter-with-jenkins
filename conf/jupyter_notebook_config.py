@@ -4,7 +4,7 @@ import tempfile
 def _run_jenkins_proxy(port):
     conf = tempfile.NamedTemporaryFile(mode='w', delete=False)
     conf.write('''
-LogLevel Warning
+LogLevel Debug
 MaxClients 5
 MinSpareServers 5
 MaxSpareServers 20
