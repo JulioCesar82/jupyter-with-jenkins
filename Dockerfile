@@ -61,7 +61,8 @@ RUN mkdir -p /opt/jupyter-with-jenkins/original/bin/ && \
 
 # Configuration for Server Proxy
 RUN cat /tmp/resource/conf/jupyter_notebook_config.py >> $CONDA_DIR/etc/jupyter/jupyter_notebook_config.py
-RUN chown $NB_USER /tmp/resource/*.ipynb
+RUN chown $NB_USER /tmp/resource/*.ipynb && \
+    chmod +r /opt/jupyter-with-jenkins/conf/tinyproxy.conf
 
 USER $NB_USER
 
