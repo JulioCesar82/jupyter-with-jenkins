@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# Create a temporary config file for tinyproxy
-TINYPROXY_CONF=$(mktemp)
-cat > "$TINYPROXY_CONF" <<EOF
+# Print the tinyproxy configuration to stdout
+cat <<EOF
 LogLevel Debug
 MaxClients 5
 MinSpareServers 5
@@ -13,6 +12,3 @@ ReverseOnly Yes
 Upstream http localhost:8080
 PreserveHostHeader Yes
 EOF
-
-# Run tinyproxy with the generated config file
-exec tinyproxy -d -c "$TINYPROXY_CONF"
