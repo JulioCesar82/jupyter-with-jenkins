@@ -22,5 +22,6 @@ c.ServerProxy.servers = {
     'command': _run_jenkins_proxy, # Nothing to do
     'absolute_url': True,
     'timeout': 120,
+    'port': 8000, # Specify the internal port tinyproxy is listening on
   }
 }
