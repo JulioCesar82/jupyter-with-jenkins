@@ -11,9 +11,9 @@ MaxSpareServers 20
 StartServers 10
 Port {port}
 ReverseOnly Yes
-Upstream http localhost:8080
-PreserveHostHeader Yes
-'''.format(port=port))
+    Upstream http localhost:8080
+    PreserveHostHeader Yes
+'''.format(port=8000)) # Changed port here
     conf.close()
     return ['tinyproxy', '-d', '-c', conf.name]
 
