@@ -56,7 +56,8 @@ RUN mkdir -p /opt/jupyter-with-jenkins/original/bin/ && \
     cp /tmp/resource/conf/bin/jupyter* /opt/conda/bin/ && \
     cp /tmp/resource/conf/bin/*.sh /opt/jupyter-with-jenkins/bin/ && \
     chmod +x /opt/conda/bin/jupyterhub-singleuser /opt/conda/bin/jupyter-notebook /opt/conda/bin/jupyter-lab \
-        /opt/jupyter-with-jenkins/bin/*
+        /opt/jupyter-with-jenkins/bin/* && \
+    chmod +x /opt/jupyter-with-jenkins/bin/start-tinyproxy.sh
 
 # Configuration for Server Proxy
 RUN cat /tmp/resource/conf/jupyter_notebook_config.py >> $CONDA_DIR/etc/jupyter/jupyter_notebook_config.py
