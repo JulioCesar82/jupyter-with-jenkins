@@ -12,6 +12,7 @@ StartServers 10
 Port {port}
 ReverseOnly Yes
 Upstream http localhost:8080
+PreserveHostHeader Yes
 '''.format(port=port))
     conf.close()
     return ['tinyproxy', '-d', '-c', conf.name]
