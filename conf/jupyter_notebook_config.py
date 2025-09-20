@@ -23,5 +23,6 @@ c.ServerProxy.servers = {
     'absolute_url': True,
     'timeout': 120,
     'port': 8000, # Specify the internal port tinyproxy is listening on
+    'health_check_path': '/jenkins/login', # Use a specific endpoint for health check
   }
 }
