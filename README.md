@@ -1,4 +1,4 @@
-# jupyter-with-jenkins [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/yacchin1205/jupyter-with-jenkins/master?urlpath=tree)
+# jupyter-with-jenkins [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JulioCesar82/jupyter-with-jenkins/master?urlpath=tree)
 Jupyter with Jenkins to perform daily tasks easily
 
 # Design
@@ -8,7 +8,7 @@ Jupyter with Jenkins to perform daily tasks easily
 # Getting started jupyter-with-jenkins with MyBinder
 
 To launch jupyter-with-jenkins, simply click the binder button:
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/yacchin1205/jupyter-with-jenkins/master?urlpath=tree)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JulioCesar82/jupyter-with-jenkins/master?urlpath=tree)
 
 After Jupyter Notebook is open, you can open the Jenkins UI from the `jenkins` menu.
 
@@ -38,7 +38,7 @@ Create a working directory and perform the following:
 
 ```
 $ cd (working directory)
-$ docker run -d -p 8888:8888 -v $(pwd):/home/jovyan --name jupyter-with-jenkins yacchin1205/jupyter-with-jenkins
+$ docker run -d -p 8888:8888 -v $(pwd):/home/jovyan --name jupyter-with-jenkins JulioCesar82/jupyter-with-jenkins
 ```
 
 Once this is done, jupyter-with-jenkins will start working on port 8888. Open `http://localhost:8888`.
