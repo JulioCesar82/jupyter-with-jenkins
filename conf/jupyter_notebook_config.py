@@ -21,6 +21,6 @@ c.ServerProxy.servers = {
   'jenkins': {
     'command': _run_jenkins_proxy, # Nothing to do
     'absolute_url': True,
-    'timeout': 30,
+    'timeout': 120,
   }
 }
